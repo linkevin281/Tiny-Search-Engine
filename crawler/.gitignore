@@ -1,0 +1,13 @@
+*
+
+!.gitignore
+!Makefile
+!README.md
+!test/
+!test/*
+!proper/
+!proper/*
+!crawler.c
+!crawker.h
+!testing.out
+!testing.sh

@@ -1,0 +1,9 @@
+*
+
+!.gitignore
+!pagedir.c
+!pagedir.h
+!word.c
+!word.h
+!index.c
+!index.h

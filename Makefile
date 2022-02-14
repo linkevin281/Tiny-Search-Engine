@@ -1,31 +1,30 @@
-# Makefile for CS50 Lab3 
-#   Builds and compiles all the data structures.
+# Makefile for CS50 Tiny Search Engine
 #
-# David Kotz, April 2016, 2017, 2019, 2021
+# David Kotz - April 2016, 2017, 2021
 
-# uncomment the following to turn on verbose memory logging
-# (and run `make clean; make` whenever you change this)
-# TESTING=-DMEMTEST
+L = libcs50
+.PHONY: all clean
 
-# Our Make program and its flags
-MAKE = make TESTING=$(TESTING)
+############## default: make all libs and programs ##########
+# If libcs50 contains set.c, we build a fresh libcs50.a;
+# otherwise we use the pre-built library provided by instructor.
+all: 
+	(cd $L && if [ -r set.c ]; then make $L.a; else cp $L-given.a $L.a; fi)
+	make -C common
+	make -C crawler
+	make -C indexer
+	make -C querier
 
-# recursively make in each subdirectory
-all:
-	$(MAKE) --directory=bag
-	$(MAKE) --directory=counters
-	$(MAKE) --directory=set
-	$(MAKE) --directory=hashtable
-	$(MAKE) --directory=lib
+############### TAGS for emacs users ##########
+TAGS:  Makefile */Makefile */*.c */*.h */*.md */*.sh
+	etags $^
 
-# 'phony' targets are helpful but do not create any file by that name
-.PHONY: clean
-
-# to clean up all derived files
+############## clean  ##########
 clean:
 	rm -f *~
-	make --directory=bag clean
-	make --directory=set clean
-	make --directory=counters clean
-	make --directory=hashtable clean
-	make --directory=lib clean
+	rm -f TAGS
+	make -C libcs50 clean
+	make -C common clean
+	make -C crawler clean
+	make -C indexer clean
+	make -C querier clean

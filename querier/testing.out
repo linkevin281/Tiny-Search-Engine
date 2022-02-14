@@ -1,0 +1,122 @@
+make[1]: Entering directory '/thayerfs/home/f004h3t/cs50-dev/tse-linkevin281/querier'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/thayerfs/home/f004h3t/cs50-dev/tse-linkevin281/querier'
+
+===== Base Test =====
+
+Current query: [ for home ]
+Score: 6 || docID: 6 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/H.html 
+Score: 4 || docID: 2 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+Score: 2 || docID: 1 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+Score: 1 || docID: 3 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html 
+Score: 1 || docID: 4 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/E.html 
+Score: 1 || docID: 5 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/G.html 
+Score: 1 || docID: 7 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/F.html 
+Score: 1 || docID: 8 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/D.html 
+Score: 1 || docID: 9 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/C.html 
+Current query: [ first or playground or coding ]
+Score: 8 || docID: 8 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/E.html 
+Score: 5 || docID: 3 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html 
+Score: 1 || docID: 6 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+Score: 1 || docID: 1 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+Current query: [ first or playground search ]
+Score: 8 || docID: 8 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+Score: 5 || docID: 3 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+
+Expected query [ for and home ]:
+Score: 6 / docID: 6
+Score: 4 / docID: 2
+Score: 2 / docID: 1
+Score: 1 / docID: 3
+Score: 1 / docID: 4
+Score: 1 / docID: 5
+Score: 1 / docID: 7
+Score: 1 / docID: 8
+Score: 1 / docID: 9
+
+Expected [ first or playground or coding ]:
+Score: 8 / docID: 8
+Score: 5 / docID: 3
+Score: 1 / docID: 6
+Score: 1 / docID: 1
+
+Expected [ first or playground and search ]:
+Score: 8 / docID: 8
+Score: 5 / docID: 3
+
+===== Spaces in input tests =====
+
+Current query: [ first search ]
+Score: 1 || docID: 3 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+Score: 1 || docID: 8 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+Current query: [ first search ]
+Score: 1 || docID: 3 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+Score: 1 || docID: 8 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+Current query: [ first search ]
+Score: 1 || docID: 3 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+Score: 1 || docID: 8 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+Current query: [ first search ]
+Score: 1 || docID: 3 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+Score: 1 || docID: 8 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+
+Query 1:
+Spaces before input
+
+Query 2:
+Spaces between inputs
+
+Query 3:
+Spaces after inputs
+
+Query 4:
+Spaces before, between and after inputs
+
+===== Non-char/space in input tests =====
+
+Error: Input must contain only letters and spaces
+Next query: 
+Error: Input must contain only letters and spaces
+Next query: 
+Error: Input must contain only letters and spaces
+Next query: 
+
+Should produce 3 errors
+
+===== Adjacent Operator Tests =====
+
+Error: Adjacent operators
+and or test
+Error: Adjacent operators
+or or test
+Error: Adjacent operators
+and and test
+Error: Adjacent operators
+or and test
+
+===== Start/End Operator Tests =====
+
+and before test
+Current query: [ the ]
+Score: 3 || docID: 1 || URL: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+or before test
+Error: Operator cannot start input sequence
+or after test
+Error: Operator cannot end input sequence
+and after test
+Error: Operator cannot end input sequence
+
+===== Invalid Args Test =====
+
+invalid crawler dir test
+Error: pageDirectory/.crawler cannot be read
+invalid index test
+Error: Index file cannot be read
+
+===== No matching Docs Test =====
+
+No Documents Match. 
+No Documents Match. 
+No Documents Match. 
+Current query: [ thisisntadoc ]
+Current query: [ thisalsoisnt or adoc ]
+Current query: [ thisdefinitly isntadoc ]

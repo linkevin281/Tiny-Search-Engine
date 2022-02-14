@@ -1,0 +1,128 @@
+./testing.sh
+make[1]: Entering directory '/thayerfs/home/f004h3t/cs50-dev/tse-linkevin281/indexer'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/thayerfs/home/f004h3t/cs50-dev/tse-linkevin281/indexer'
+Unit test
+Check ../indexer/testDir/letters-10/testCopy.index to confirm
+
+No arguments test
+Incorrect number of args
+2. no arguments test passed
+
+One argument test
+Incorrect number of args
+3. one argument test passed
+
+Incorrect number of args
+4. three argument test passed
+
+Directory does not exist
+5. invalid pageDirectory(non existant) passed
+
+Directory is not produced by crawler
+6. Invalid pageDirectory (non crawler) passed
+
+Could not open/create index file for writing
+7. invalid indexFIle path test passed
+
+Could not open/create index file for writing
+8. invalid indexFile readOnlyDir test passed
+
+Could not open/create index file for writing
+9. invalid indexFIle readOnlyFile test passed
+
+Letters-10 test
+==5077== Memcheck, a memory error detector
+==5077== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==5077== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==5077== Command: ./indexer ../indexer/testDir/letters-10 ../indexer/testDir/letters-10/test.index
+==5077== 
+==5077== 
+==5077== HEAP SUMMARY:
+==5077==     in use at exit: 0 bytes in 0 blocks
+==5077==   total heap usage: 1,227 allocs, 1,227 frees, 231,541 bytes allocated
+==5077== 
+==5077== All heap blocks were freed -- no leaks are possible
+==5077== 
+==5077== For counts of detected and suppressed errors, rerun with: -v
+==5077== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==5091== Memcheck, a memory error detector
+==5091== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==5091== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==5091== Command: ./indextest ../indexer/testDir/letters-10/test.index ../indexer/testDir/letters-10/testCopy.index
+==5091== 
+==5091== 
+==5091== HEAP SUMMARY:
+==5091==     in use at exit: 0 bytes in 0 blocks
+==5091==   total heap usage: 439 allocs, 439 frees, 32,438 bytes allocated
+==5091== 
+==5091== All heap blocks were freed -- no leaks are possible
+==5091== 
+==5091== For counts of detected and suppressed errors, rerun with: -v
+==5091== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+toscrape-0 test
+==5104== Memcheck, a memory error detector
+==5104== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==5104== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==5104== Command: ./indexer ../indexer/testDir/toscrape-0 ../indexer/testDir/toscrape-0/test.index
+==5104== 
+==5104== 
+==5104== HEAP SUMMARY:
+==5104==     in use at exit: 0 bytes in 0 blocks
+==5104==   total heap usage: 52,258 allocs, 52,258 frees, 1,315,777,925 bytes allocated
+==5104== 
+==5104== All heap blocks were freed -- no leaks are possible
+==5104== 
+==5104== For counts of detected and suppressed errors, rerun with: -v
+==5104== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==5215== Memcheck, a memory error detector
+==5215== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==5215== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==5215== Command: ./indextest ../indexer/testDir/toscrape-0/test.index ../indexer/testDir/toscrape-0/testCopy.index
+==5215== 
+==5215== 
+==5215== HEAP SUMMARY:
+==5215==     in use at exit: 0 bytes in 0 blocks
+==5215==   total heap usage: 1,281 allocs, 1,281 frees, 71,724 bytes allocated
+==5215== 
+==5215== All heap blocks were freed -- no leaks are possible
+==5215== 
+==5215== For counts of detected and suppressed errors, rerun with: -v
+==5215== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+Wikipedia-0 test
+==5226== Memcheck, a memory error detector
+==5226== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==5226== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==5226== Command: ./indexer ../indexer/testDir/wikipedia-0 ../indexer/testDir/wikipedia-0/test.index
+==5226== 
+==5226== 
+==5226== HEAP SUMMARY:
+==5226==     in use at exit: 0 bytes in 0 blocks
+==5226==   total heap usage: 6,618 allocs, 6,618 frees, 19,533,027 bytes allocated
+==5226== 
+==5226== All heap blocks were freed -- no leaks are possible
+==5226== 
+==5226== For counts of detected and suppressed errors, rerun with: -v
+==5226== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==5240== Memcheck, a memory error detector
+==5240== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==5240== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==5240== Command: ./indexer ../indexer/testDir/wikipedia-0 ../indexer/testDir/wikipedia-0/test.index
+==5240== 
+==5240== 
+==5240== HEAP SUMMARY:
+==5240==     in use at exit: 0 bytes in 0 blocks
+==5240==   total heap usage: 6,618 allocs, 6,618 frees, 19,533,027 bytes allocated
+==5240== 
+==5240== All heap blocks were freed -- no leaks are possible
+==5240== 
+==5240== For counts of detected and suppressed errors, rerun with: -v
+==5240== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

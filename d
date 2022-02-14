@@ -1,0 +1,13 @@
+core.pager=less -R
+core.mergeoptions=--no-edit
+push.default=simple
+user.name=Kevin Lin
+user.email=linkevin281@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/CS50Dartmouth21FS1/tse-linkevin281
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main

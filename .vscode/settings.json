@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "index.h": "c",
+        "unordered_map": "c",
+        "ctype.h": "c",
+        "file.h": "c",
+        "stdio.h": "c",
+        "hashtable.h": "c",
+        "indexload": "c",
+        "string.h": "c"
+    }
+}
