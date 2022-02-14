@@ -1,9 +1,14 @@
 # CS50 TSE
-## Student name (GitHub username)
+## Kevin Lin
 
-The assignment and Specs are in a [public repo](https://github.com/cs50spring2021/tse-labs).
-Do not clone that repo; view it on GitHub.
-Watch there for any commits that may represent updates to the assignment or specs.
+### Crawler
 
-Add here any assumptions you made while writing the crawler, any ways in which your implementation differs from the three Specs, or any ways in which you know your implementation fails to work.
+The crawler crawls a website and retrieves webpages starting with a specified URL. It parses the initial webpage, extracts any embedded URLs and retrieves those pages, and crawls the pages found at those URLs, but limiting itself to some threshold number of hops from the seed URL, and avoiding visiting any given URL more than once. It saves the pages, and the URL and depth for each, in files. When the crawler process is complete, the indexing of the collected documents can begin.
 
+### Indexer
+
+The TSE indexer is a standalone program that reads the document files produced by the TSE crawler, builds an index, and writes that index to a file. Its companion, the index tester, loads an index file produced by the indexer and saves it to another file.
+
+### Querier
+
+The querier takes in user input as a query and searches through index files produced by the indexer. Users can use basic binary operators to narrow down their search. 
