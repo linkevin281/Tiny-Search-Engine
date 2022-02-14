@@ -1,0 +1,10 @@
+*
+
+!.gitignore
+!Makefile
+!README.md
+!hashtable.c
+!hashtable.h
+!hashtableTest.c
+!test.txt
+!testing.out

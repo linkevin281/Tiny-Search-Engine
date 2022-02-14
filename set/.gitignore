@@ -1,0 +1,10 @@
+*
+
+!.gitignore
+!Makefile
+!README.md
+!set.c
+!set.h
+!setTest.c
+!test.txt
+!testing.out

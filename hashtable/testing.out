@@ -1,0 +1,47 @@
+./hashtableTest < test.txt
+Create hashtable...
+
+Testing hashtable_insert...
+
+Test with null ht good key good item...
+Test with good key null item...
+Test with good ht, null key good item...
+Test with null ht, null key, null item...
+
+Count (should be zero): 0
+Insert name: 
+Insert key: 
+Insert name: 
+Insert key: 
+Insert name: 
+Insert key: 
+Insert name: 
+Insert key: 
+Insert name: 
+Insert key: 
+
+Testing hashtable_insert...
+Inserted one,one
+Inserted two,two
+Inserted three,three
+Inserted one,existing (should fail because key is duplicate)
+Inserted existing,one (should succeed with duplicate value)
+Testing hashtable_print
+The hashtable:
+{}{}{(two, two),}{}{}{}{}{}{}{}{}{}{}{(three, three),}{(existing, one),}{}{}{}{(one, one),}{}
+Expected: 
+{}{}{(two, two),}{}{}{}{}{}{}{}{}{}{}{(three, three),}{(existing, one),}{}{}{}{(one, one),}{}
+
+Testing hashtable_iterate
+These two values should be equal: 4 = 4
+
+Testing hashtable_find...
+For key [three]: three = three
+For key [existing]: one = one
+For key [dne]: (null) = (null)
+Null hashtable: (null) = (null)
+Null key: (null) = (null)
+Input key: 
+Key is: (null), Item is: (null)
+
+delete the hashtable...
